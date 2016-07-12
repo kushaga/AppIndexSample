@@ -2,6 +2,7 @@ package com.akosha.sample1.appindexsample;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -14,14 +15,20 @@ import java.util.Set;
  */
 public class DeepLinkFactory {
 
+    private static final String TAG = DeepLinkFactory.class.getSimpleName();
     public static final String FIRST = "appindexkushagar";
     private static final String SECOND = "secondappindexkushagar";
     private static final String FIRST1 = "helpkushagar";
+    private static final String UBER = "cabuber5";
+
 
     public static Intent getIntent(Uri uri) {
         if (uri == null) {
             return defaultIntent();
         }
+
+        Log.d(TAG, uri.toString());
+
         List<String> pathSegments = uri.getPathSegments();
         if (pathSegments == null || pathSegments.size() == 0) {
             return defaultIntent();
@@ -34,6 +41,8 @@ public class DeepLinkFactory {
                 return getIntent(SECOND);
             case FIRST1:
                 return getIntent(SECOND);
+            case UBER:
+                return getIntent(UBER);
             default:
                 return getIntent(FIRST);
         }
@@ -46,6 +55,8 @@ public class DeepLinkFactory {
                 return new Intent(AppIndexApplication.getInstance(), MainActivity.class);
             case SECOND:
                 return new Intent(AppIndexApplication.getInstance(), FirstActivity.class);
+            case UBER:
+                return new Intent(AppIndexApplication.getInstance(),BookCabActivity.class);
             default:
                 return new Intent(AppIndexApplication.getInstance(), MainActivity.class);
         }

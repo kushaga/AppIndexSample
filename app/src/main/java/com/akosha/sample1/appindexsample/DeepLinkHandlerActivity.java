@@ -21,7 +21,7 @@ import com.google.android.gms.common.api.Status;
 public class DeepLinkHandlerActivity extends AppCompatActivity {
 
     private GoogleApiClient mClient;
-    private static final Uri BASE_APP_URI = Uri.parse("android-app://com.akosha.sample1.appindexsample/http/www.kush.in/");
+    private static final Uri BASE_APP_URI = AppIndexApplication.getInstance().BASE_APP_URI;
     private String action;
     private Uri mUrl;
     private String mTitle;

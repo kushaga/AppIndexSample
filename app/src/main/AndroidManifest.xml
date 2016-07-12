@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.akosha.sample1.appindexsample">
 
+    <uses-sdk android:minSdkVersion="15" />
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-sdk
-        android:minSdkVersion="15"
-        ></uses-sdk>
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".AppIndexApplication"
@@ -33,14 +36,33 @@
                 <data
                     android:host="www.kush.in"
                     android:scheme="https" />
-                <!--<data-->
-                    <!--android:host="*.kush.in"-->
-                    <!--android:scheme="http" />-->
-                <!--<data-->
-                    <!--android:host="*.kush.in"-->
-                    <!--android:scheme="https" />-->
+                <!-- <data -->
+                <!-- android:host="*.kush.in" -->
+                <!-- android:scheme="http" /> -->
+                <!-- <data -->
+                <!-- android:host="*.kush.in" -->
+                <!-- android:scheme="https" /> -->
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".NewDeepLinkHandlerActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="def.kush.in"
+                    android:scheme="http" />
+                <data
+                    android:host="def.kush.in"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -50,7 +72,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".FirstActivity"
             android:screenOrientation="portrait" />
@@ -69,6 +90,11 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
+        <activity android:name=".BookCabActivity" />
+
+        <service android:name=".BgService" />
+
+        <activity android:name=".RestaurantActivity"></activity>
     </application>
 
 </manifest>
