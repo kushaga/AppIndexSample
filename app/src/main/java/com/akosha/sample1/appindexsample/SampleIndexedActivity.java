@@ -61,7 +61,7 @@ public class SampleIndexedActivity extends AppCompatActivity {
         ArrayList<String> titles = new ArrayList<>();
 
         for (int i = 1; i <= 10; i++) {
-            titles.add("indexed Title " + i);
+            titles.add("book cab " + i);
         }
 
         for (int i = 0; i < 10; i++) {
