@@ -8,8 +8,8 @@ android {
         applicationId "com.akosha.sample1.appindexsample"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 21
-        versionName "3.1"
+        versionCode 23
+        versionName "4.1"
     }
     signingConfigs {
 //        playStoreConfig {

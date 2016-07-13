@@ -18,8 +18,8 @@ public class AppIndexApplication extends Application {
 
     public static final Uri BASE_APP_URI1 = Uri.parse("android-app://com.akosha.sample1.appindexsample/helpchat/helpchat/cabs");
 
+//    public static final Uri BASE_APP_URI2 = Uri.parse("android-app://com.akosha.sample1.appindexsample/http/abc.kush.in/");
     public static final Uri BASE_APP_URI2 = Uri.parse("android-app://com.akosha.sample1.appindexsample/helpchat/helpchat/cabs");
-//    public static final Uri BASE_APP_URI2 = Uri.parse(DEFAULT_URL);
 
     private static AppIndexApplication instance;
 

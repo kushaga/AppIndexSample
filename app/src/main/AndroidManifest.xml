@@ -10,6 +10,7 @@
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:name=".AppIndexApplication"
         android:allowBackup="true"
@@ -20,6 +21,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <meta-data android:name="search-engine"
+            android:resource="@xml/noindex"/>
 
         <activity
             android:name=".DeepLinkHandlerActivity"
@@ -72,9 +76,6 @@
                 <data
                     android:host="*.helpchat.in"
                     android:scheme="https"/>
-                <data
-                    android:host="*.in"
-                    android:scheme="http"/>
 
 
             </intent-filter>
