@@ -65,7 +65,7 @@ public class BgService extends Service {
         }
 
         for (int i = 0; i < 10; i++) {
-            final Uri APP_URI = AppIndexApplication.getInstance().BASE_APP_URI.buildUpon().appendPath(titles.get(i)).build();
+            final Uri APP_URI = AppIndexApplication.getInstance().BASE_APP_URI1.buildUpon().appendPath(titles.get(i)).build();
             Action viewAction = Action.newAction(Action.TYPE_ADD, titles.get(i), APP_URI);
             actionArrayList.add(viewAction);
         }

@@ -24,6 +24,10 @@ public class DeepLinkIntentFactory {
 
     public Intent parseAndGetIntent(Uri uri) {
 
+        //associate deeplinks with activity
+
+        Log.d(TAG, uri.toString());
+
         List<String> pathSegments = uri.getPathSegments();
 
         Intent intent = null;
